@@ -1,0 +1,13 @@
+## Chybi
+- Home
+	- Banner
+	- 4 icon block
+- Nabvar
+	- Responz menu
+	- Hambac - tentokrat jen linie posunovaci doprava a do leva
+- Footer
+	- Menu v responzu
+- Forms
+- Text page - podle CIC
+- 404
+- Zbytky z sample page

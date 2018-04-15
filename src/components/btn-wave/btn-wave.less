@@ -1,0 +1,26 @@
+@keyframes btn-wave {
+	0% {
+		background-position-x: 0;
+	}
+	100% {
+		background-position-x: 14.4px;
+	}
+}
+
+.btn-wave {
+	display: inline-block;
+	vertical-align: middle;
+	background: url("../images/ico-wave.svg") repeat-x center bottom;
+	background-size: auto 5px;
+	text-transform: uppercase;
+	line-height: 1.5;
+	font-weight: bold;
+	padding-bottom: 0.8rem;
+	animation: btn-wave 1200ms linear infinite forwards normal;
+	animation-play-state: paused;
+
+	&:hover,
+	&:active {
+		animation-play-state: running;
+	}
+}
