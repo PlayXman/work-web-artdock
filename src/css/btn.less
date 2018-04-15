@@ -1,128 +1,106 @@
-.btn {
-	font-size: 0.9em;
-	line-height: 1.2;
-	font-weight: bold;
-	padding: 1.1em 2.5em;
-	color: @color__red;
-	border: 3px solid @color__red;
-	text-transform: uppercase;
-	vertical-align: middle;
-	transition: opacity @transition__length--hover;
-
-	&:hover,
-	&:active {
-		opacity: 0.8;
-		text-decoration: none;
-		color: @color__red;
-	}
-
-	&__color {
-		&--white {
-			color: @color__white;
-			border-color: @color__white;
-
-			&:hover,
-			&:active {
-				color: @color__white;
-			}
-
-			.btn__icon i {
-				background: @color__white;
-			}
-		}
-
-		&--blue {
-			color: @color__blue;
-			border-color: @color__blue;
-
-			&:hover,
-			&:active {
-				color: @color__blue;
-			}
-
-			.btn__icon i {
-				background: @color__blue;
-			}
-		}
-
-		&--green {
-			color: @color__green;
-			border-color: @color__green;
-
-			&:hover,
-			&:active {
-				color: @color__green;
-			}
-
-			.btn__icon i {
-				background: @color__green;
-			}
-		}
-
-		&--grey {
-			color: @color__grey;
-			border-color: @color__grey;
-
-			&:hover,
-			&:active {
-				color: @color__grey;
-			}
-
-			.btn__icon i {
-				background: @color__grey;
-			}
-		}
-	}
-}
+//.btn {
+//	font-size: 0.9em;
+//	line-height: 1.2;
+//	font-weight: bold;
+//	padding: 1.1em 2.5em;
+//	//color: @color__red;
+//	//border: 3px solid @color__red;
+//	text-transform: uppercase;
+//	vertical-align: middle;
+//	transition: opacity @transition__length--hover;
+//
+//	&:hover,
+//	&:active {
+//		opacity: 0.8;
+//		text-decoration: none;
+//		//color: @color__red;
+//	}
+//
+//	&__color {
+//		&--white {
+//			color: @color__white;
+//			border-color: @color__white;
+//
+//			&:hover,
+//			&:active {
+//				color: @color__white;
+//			}
+//
+//			.btn__icon i {
+//				background: @color__white;
+//			}
+//		}
+//
+//		&--blue {
+//			//color: @color__blue;
+//			//border-color: @color__blue;
+//
+//			&:hover,
+//			&:active {
+//				//color: @color__blue;
+//			}
+//
+//			.btn__icon i {
+//				//background: @color__blue;
+//			}
+//		}
+//
+//		&--green {
+//			color: @color__green;
+//			border-color: @color__green;
+//
+//			&:hover,
+//			&:active {
+//				color: @color__green;
+//			}
+//
+//			.btn__icon i {
+//				background: @color__green;
+//			}
+//		}
+//
+//		&--grey {
+//			//color: @color__grey;
+//			//border-color: @color__grey;
+//
+//			&:hover,
+//			&:active {
+//				//color: @color__grey;
+//			}
+//
+//			.btn__icon i {
+//				//background: @color__grey;
+//			}
+//		}
+//	}
+//}
 
 .btn-link {
 	position: relative;
-	font-weight: bold;
+	font-weight: 300;
 	text-transform: uppercase;
-	padding: 2rem 1rem;
+	padding: 2em 0 2em 1em;
 	text-decoration: none;
+	font-size: 1.15em;
+	transition: color @transition__length--hover;
 
 	&:hover,
 	&:active {
-		color: @color__red;
+		color: @color__purple;
 		text-decoration: none;
 	}
 
-	&__hoverColor {
-		&--blue {
-			&:hover,
-			&:active {
-				color: @color__blue;
-			}
-		}
-
-		&--white {
-			.btn__icon i {
-				background: @color__white;
-			}
-
-			&:hover,
-			&:active {
-				color: @color__white;
-
-				@media (max-width: (@breakpoint__sm - 1)) {
-					color: @color__lightBlue;
-
-					.btn__icon {
-						display: none
-					}
-				}
-			}
-		}
+	&:not(:last-child):after {
+		content: '\61';
+		.icon();
+		margin-left: 1.3em;
+		color: @color__darkPurple;
+		vertical-align: baseline;
+		font-size: 0.8em;
 	}
 
-	.btn__icon {
-		position: absolute;
-		margin: 0 auto;
-		left: 0;
-		right: 0;
-		text-align: center;
-		bottom: 10%;
+	&:last-child {
+
 	}
 }
 
@@ -134,27 +112,7 @@
 	&:hover,
 	&:active {
 		text-decoration: none;
-		color: lighten(@color__blue, 10%);
-	}
-
-	&__color {
-		&--red {
-			color: @color__red;
-
-			&:hover,
-			&:active {
-				color: darken(@color__red, 20%);
-			}
-		}
-
-		&--lightBlue {
-			color: @color__lightBlue;
-
-			&:hover,
-			&:active {
-				color: lighten(@color__lightBlue, 10%);
-			}
-		}
+		color: @color__purple;
 	}
 
 	@media (min-width: @breakpoint__md) {
@@ -162,12 +120,12 @@
 	}
 }
 
-.btn-image {
-	transition: opacity @transition__length--hover;
-
-	&:hover,
-	&:active {
-		text-decoration: none;
-		opacity: 0.8;
-	}
-}
+//.btn-image {
+//	transition: opacity @transition__length--hover;
+//
+//	&:hover,
+//	&:active {
+//		text-decoration: none;
+//		opacity: 0.8;
+//	}
+//}

@@ -4,28 +4,20 @@
 
 html {
 	font-size: 80%;
-	background: #23428e;
-	background: -moz-radial-gradient(20% 60%, ellipse cover, #23428e 0%, #29337a 100%);
-	background: -webkit-radial-gradient(20% 60%, ellipse cover, #23428e 0%, #29337a 100%);
-	background: radial-gradient(ellipse at 20% 60%, #23428e 0%, #29337a 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#23428e', endColorstr='#29337a', GradientType=1);
+	background: @color__darkGrey;
 
 	@media (min-width: @breakpoint__sm) {
-		font-size: 90%;
-	}
-
-	@media (min-width: @breakpoint__md) {
-		font-size: 100%;
+		font-size: 87.5%;
 	}
 }
 
 body {
 	margin: 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
-	font-weight: 300;
-	color: @color__blue;
+	font-weight: normal;
+	color: @color__black;
 	background: @color__white;
 }
 
@@ -54,19 +46,16 @@ h2,
 h3,
 h4 {
 	line-height: 1.2;
+	font-family: 'Dosis', sans-serif;
 }
 
 h1 {
 	font-size: 2rem;
-	font-weight: 100;
+	font-weight: 300;
 	margin-bottom: 0.8em;
 
 	@media (min-width: @breakpoint__sm) {
 		font-size: 2.5rem;
-	}
-
-	@media (min-width: @breakpoint__md) {
-		font-size: 3.8rem;
 	}
 }
 
@@ -76,17 +65,13 @@ h2 {
 	margin-bottom: 0.8em;
 
 	@media (min-width: @breakpoint__sm) {
-		font-size: 2rem;
-	}
-
-	@media (min-width: @breakpoint__md) {
 		font-size: 2.5rem;
 	}
 }
 
 h3 {
 	font-size: 1.4rem;
-	font-weight: 500;
+	font-weight: bold;
 	margin-bottom: 0.8em;
 
 	@media (min-width: @breakpoint__sm) {
@@ -94,7 +79,7 @@ h3 {
 	}
 
 	@media (min-width: @breakpoint__md) {
-		font-size: 1.8rem;
+		font-size: 1.9rem;
 	}
 }
 
@@ -115,18 +100,13 @@ h6 {
 hr {
 	margin: 1rem 0;
 	border: 0;
-	border-bottom: 1px solid fade(@color__blue, 20%);
+	border-bottom: 1px solid fade(@color__black, 20%);
 	width: 45%;
 }
 
 .wrapper {
 	max-width: @content__width;
 	margin: 0 auto;
-
-	&--smaller {
-		max-width: @content__width--smaller;
-		margin: 0 auto;
-	}
 }
 
 .js {
@@ -142,10 +122,6 @@ hr {
 	&__color {
 		&--white {
 			color: @color__white;
-		}
-
-		&--lightBlue {
-			color: @color__lightBlue;
 		}
 	}
 
@@ -178,23 +154,11 @@ hr {
 
 /* background */
 .bg {
-	&--yellow {
-		background-color: @color__yellow;
+	&--solomon {
+		background-color: @color__solomon;
 	}
 	&--green {
 		background-color: @color__green;
-	}
-	&--pink {
-		background-color: @color__pink;
-	}
-	&--blue {
-		background-color: @color__lighterBlue;
-	}
-	&--aqua {
-		background-color: @color__aqua;
-	}
-	&--red {
-		background-color: @color__lighterRed;
 	}
 }
 

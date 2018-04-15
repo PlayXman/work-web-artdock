@@ -23,7 +23,7 @@ const paths = {
 		target: 'build/css'
 	},
 	js: {
-		source: ['src/components/**/*.js'],
+		source: ['src/vendors/swipebox/js/jquery.swipebox.min.js', 'src/components/**/*.js'],
 		target: 'build/js',
 	},
 	images: {
