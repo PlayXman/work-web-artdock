@@ -19,6 +19,7 @@ body {
 	font-weight: normal;
 	color: @color__black;
 	background: @color__white;
+	position: relative;
 }
 
 a {
@@ -50,12 +51,31 @@ h4 {
 }
 
 h1 {
-	font-size: 2rem;
+	font-size: 2.4rem;
 	font-weight: 300;
-	margin-bottom: 0.8em;
+	margin-bottom: 0.6em;
+	color: @color__purple;
+
+	&:before {
+		content: '\67';
+		.icon();
+		display: block;
+		font-size: 0.8em;
+		margin-bottom: 0.5em;
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		height: 4px;
+		width: 50%;
+		max-width: 300px;
+		background: url("../images/ico-wave_purple.svg") repeat-x center;
+		margin: 0.5em auto 0;
+	}
 
 	@media (min-width: @breakpoint__sm) {
-		font-size: 2.5rem;
+		font-size: 4.3rem;
 	}
 }
 
@@ -63,6 +83,7 @@ h2 {
 	font-size: 2rem;
 	font-weight: 300;
 	margin-bottom: 0.8em;
+	color: @color__black;
 
 	@media (min-width: @breakpoint__sm) {
 		font-size: 2.9rem;
@@ -73,6 +94,7 @@ h3 {
 	font-size: 1.4rem;
 	font-weight: bold;
 	margin-bottom: 0.8em;
+	color: @color__purple;
 
 	@media (min-width: @breakpoint__sm) {
 		font-size: 1.6rem;
@@ -107,6 +129,11 @@ hr {
 .wrapper {
 	max-width: @content__width;
 	margin: 0 auto;
+
+	&--small {
+		max-width: @content__width--small;
+		margin: 0 auto;
+	}
 }
 
 .js {

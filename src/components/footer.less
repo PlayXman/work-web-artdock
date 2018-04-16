@@ -19,6 +19,20 @@ footer {
 		@media (max-width: (@breakpoint__sm - 1)) {
 			padding: 2rem 0;
 		}
+		
+		@media (max-width: 484px) {
+			margin: 0 auto;
+			max-width: 250px;
+
+			a {
+				display: block;
+				padding: 0.5em 1em;
+
+				&:after {
+					display: none;
+				}
+			}
+		}
 	}
 
 	&__socials {

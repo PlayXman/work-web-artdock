@@ -1,0 +1,79 @@
+.banner {
+	&-home {
+		position: relative;
+		background: url("../images/home/bg-banner.jpg") no-repeat center;
+		background-size: cover;
+
+		&:after {
+			content: '';
+			display: block;
+			padding-top: 55.31%;
+		}
+
+		&__container {
+			position: absolute;
+			bottom: 20%;
+
+			.col {
+				max-width: 600px;
+			}
+			
+			@media (max-width: 1082px) {
+				font-size: 10px;
+			}
+
+			@media (max-width: 506px) {
+				font-size: 8px;
+			}
+		}
+
+		&__icon {
+			color: @color__purple;
+			background: url("../images/ico-wave_purple.svg") repeat-x center 74%;
+			background-size: auto 5px;
+			font-size: 8.7em;
+			line-height: 1;
+			width: 100%;
+			//max-width: 430px;
+			max-width: 80%;
+			margin: 0 auto 0.3rem;
+
+			&:before {
+				content: '\67';
+				.icon();
+			}
+		}
+
+		&__text {
+			font-family: 'Dosis', sans-serif;
+			font-weight: 300;
+			font-size: 2.9em;
+			margin-bottom: 3rem;
+		}
+
+		.btn {
+			font-size: 1.1rem;
+		}
+
+		@media (max-width: 1280px) {
+			background-image: url("../images/home/bg-banner_md.jpg");
+		}
+
+		@media (max-width: 918px) {
+			&:after {
+				display: none;
+			}
+
+			&__container {
+				position: relative;
+				bottom: auto;
+				padding-top: 8rem;
+				padding-bottom: 6rem;
+			}
+		}
+
+		@media (max-width: 854px) {
+			background-image: url("../images/home/bg-banner_sm.jpg");
+		}
+	}
+}

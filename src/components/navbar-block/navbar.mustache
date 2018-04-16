@@ -3,7 +3,7 @@
 		<div class="col">
 			<a href="home.html" title="Czech Innovation Consulting"><img src="../images/logo.svg" alt="Czech Innovation Consulting" class="navbar__logo" width="150" height="74"></a>
 		</div>
-		<div class="col-auto">
+		<div class="col-auto d-none d-sm-block">
 			<div class="container-fluid">
 				<div class="row align-items-center">
 					<div class="navbar__mainLinks">
@@ -17,5 +17,10 @@
 				</div>
 			</div>
 		</div>
+		<div class="col-auto d-block d-sm-none text__color--white">
+			<a id="menu-bar__open" class="btn-icon" href="#" title="Podmenu"><i class="icon-hamburger"></i></a>
+		</div>
 	</div>
 </div>
+
+{{> menu-bar}}

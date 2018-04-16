@@ -1,79 +1,23 @@
-//.btn {
-//	font-size: 0.9em;
-//	line-height: 1.2;
-//	font-weight: bold;
-//	padding: 1.1em 2.5em;
-//	//color: @color__red;
-//	//border: 3px solid @color__red;
-//	text-transform: uppercase;
-//	vertical-align: middle;
-//	transition: opacity @transition__length--hover;
-//
-//	&:hover,
-//	&:active {
-//		opacity: 0.8;
-//		text-decoration: none;
-//		//color: @color__red;
-//	}
-//
-//	&__color {
-//		&--white {
-//			color: @color__white;
-//			border-color: @color__white;
-//
-//			&:hover,
-//			&:active {
-//				color: @color__white;
-//			}
-//
-//			.btn__icon i {
-//				background: @color__white;
-//			}
-//		}
-//
-//		&--blue {
-//			//color: @color__blue;
-//			//border-color: @color__blue;
-//
-//			&:hover,
-//			&:active {
-//				//color: @color__blue;
-//			}
-//
-//			.btn__icon i {
-//				//background: @color__blue;
-//			}
-//		}
-//
-//		&--green {
-//			color: @color__green;
-//			border-color: @color__green;
-//
-//			&:hover,
-//			&:active {
-//				color: @color__green;
-//			}
-//
-//			.btn__icon i {
-//				background: @color__green;
-//			}
-//		}
-//
-//		&--grey {
-//			//color: @color__grey;
-//			//border-color: @color__grey;
-//
-//			&:hover,
-//			&:active {
-//				//color: @color__grey;
-//			}
-//
-//			.btn__icon i {
-//				//background: @color__grey;
-//			}
-//		}
-//	}
-//}
+.btn {
+	font-size: 1.1em;
+	line-height: 1.2;
+	font-weight: 500;
+	padding: 1em 1.3em;
+	color: @color__white;
+	border: 1px solid @color__purple;
+	border-radius: 5px;
+	text-transform: uppercase;
+	vertical-align: middle;
+	background: transparent;
+	transition: color @transition__length--hover, background @transition__length--hover;
+
+	&:hover,
+	&:active {
+		text-decoration: none;
+		color: @color__white;
+		background: @color__purple;
+	}
+}
 
 .btn-link {
 	position: relative;
@@ -104,6 +48,7 @@
 	font-size: 2rem;
 	padding: 0 0.2rem;
 	transition: color @transition__length--hover;
+	text-decoration: none;
 
 	&:hover,
 	&:active {
