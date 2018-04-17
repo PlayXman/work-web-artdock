@@ -1,0 +1,50 @@
+.block-quotes {
+	&__item {
+		margin-bottom: 8rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		i {
+			font-size: 4.7em;
+			color: @color__purple;
+			margin-bottom: 0.2em;
+			display: inline-block;
+		}
+
+		h3 {
+			line-height: 1.2;
+			margin-bottom: 1.2em;
+			overflow: hidden;
+
+			span {
+				position: relative;
+				color: transparent;
+				background: #a233f4;
+				background: -moz-linear-gradient(left, #a233f4 0%, #671fd2 100%);
+				background: -webkit-linear-gradient(left, #a233f4 0%,#671fd2 100%);
+				background: linear-gradient(to right, #a233f4 0%,#671fd2 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a233f4', endColorstr='#671fd2',GradientType=1 );
+				line-height: 1;
+			}
+
+			svg {
+				position: absolute;
+				left: -1px;
+				top: -1px;
+				width: 102%;
+				height: 105%;
+				z-index: 1;
+			}
+		}
+
+		p {
+			margin-bottom: 3em;
+		}
+
+		@media (min-width: @breakpoint__md) {
+			margin-bottom: 0;
+		}
+	}
+}

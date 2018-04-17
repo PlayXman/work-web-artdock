@@ -1,0 +1,45 @@
+footer {
+	background: @color__darkGrey;
+	padding-top: 2rem;
+	padding-bottom: 7.2rem;
+}
+
+.footer {
+	&__menuCont {
+		margin-bottom: 2rem;
+
+		@media (min-width: @breakpoint__md) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__menu {
+		text-align: center;
+
+		@media (max-width: (@breakpoint__sm - 1)) {
+			padding: 2rem 0;
+		}
+		
+		@media (max-width: 484px) {
+			margin: 0 auto;
+			max-width: 250px;
+
+			a {
+				display: block;
+				padding: 0.5em 1em;
+
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&__socials {
+		text-align: center;
+
+		@media (min-width: @breakpoint__md) {
+			text-align: right;
+		}
+	}
+}

@@ -1,0 +1,40 @@
+@keyframes btn-wave {
+	0% {
+		background-position-x: 0;
+	}
+	100% {
+		background-position-x: 14.4px;
+	}
+}
+
+.btn-wave {
+	display: inline-block;
+	vertical-align: middle;
+	background: url("../images/ico-wave.svg") repeat-x center bottom;
+	background-size: 14.4px 5px;
+	text-transform: uppercase;
+	line-height: 1.5;
+	font-weight: bold;
+	padding-bottom: 0.6rem;
+	animation: btn-wave 1200ms linear infinite forwards normal;
+	animation-play-state: paused;
+	text-decoration: none;
+
+	&:hover,
+	&:active {
+		animation-play-state: running;
+		text-decoration: none;
+	}
+
+	&__color {
+		&--purple {
+			color: @color__darkPurple;
+			background-image: url("../images/ico-wave_purple.svg");
+
+			&:hover,
+			&:active {
+				color: @color__darkPurple;
+			}
+		}
+	}
+}

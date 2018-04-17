@@ -1,42 +1,5 @@
-.banner-article {
-	position: relative;
-
-	&__text {
-		padding: 2rem 15px;
-		position: relative;
-		z-index: 2;
-	}
-
-	&__image {
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-		z-index: 1;
-		padding-top: 24%;
-	}
-
-	@media (min-width: @content__width--article) {
-		&__text {
-			width: 40%;
-		}
-
-		&__image {
-			width: 60%;
-			position: absolute;
-			right: 0;
-			top: 0;
-			bottom: 0;
-			padding-top: 0;
-		}
-	}
-}
-
 article {
-	max-width: @content__width--article;
-
-	h3 {
-		color: @color__red;
-	}
+	color: @color__darkPurple;
 
 	a {
 		text-decoration: underline;
@@ -60,51 +23,41 @@ article {
 	}
 }
 
-.perex {
-	font-size: 1.3rem;
-	line-height: 1.7;
-	padding-bottom: 1.5rem;
-	margin-bottom: 1.5rem;
-	position: relative;
+.article {
+	&__share {
+		color: @color__purple;
+		text-align: center;
+		margin-bottom: 4rem;
 
-	&:after {
-		content: '';
-		position: absolute;
-		display: block;
-		height: 1px;
-		background: fade(@color__blue, 20%);
-		bottom: 0;
-		width: 45%;
+		* {
+			vertical-align: middle;
+		}
+
+		span {
+			margin-right: 2rem;
+		}
+
+		.btn-icon {
+			line-height: 1;
+
+			&:hover,
+			&:active {
+				color: @color__darkPurple;
+			}
+		}
+	}
+
+	&__perex {
+		font-size: 1.2rem;
 	}
 }
 
 blockquote {
 	font-style: italic;
-	font-weight: bold;
 	padding: 2rem 5%;
 	position: relative;
+	font-size: 1rem;
 	margin-bottom: 1.6rem;
-
-	&:before {
-		content: '';
-		position: absolute;
-		display: block;
-		height: 1px;
-		background: fade(@color__blue, 20%);
-		bottom: 1.1rem;
-		width: calc(~"45% - 1.2rem");
-	}
-
-	&:after {
-		content: '„';
-		position: absolute;
-		display: block;
-		font-size: 4.2rem;
-		font-style: normal;
-		left: 0;
-		right: 0;
-		bottom: -1rem;
-		text-align: center;
-		color: fade(@color__blue, 20%);
-	}
+	background: @color__veryLightPurple;
+	color: @color__purple;
 }

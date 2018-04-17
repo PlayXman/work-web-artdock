@@ -4,29 +4,22 @@
 
 html {
 	font-size: 80%;
-	background: #23428e;
-	background: -moz-radial-gradient(20% 60%, ellipse cover, #23428e 0%, #29337a 100%);
-	background: -webkit-radial-gradient(20% 60%, ellipse cover, #23428e 0%, #29337a 100%);
-	background: radial-gradient(ellipse at 20% 60%, #23428e 0%, #29337a 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#23428e', endColorstr='#29337a', GradientType=1);
+	background: @color__darkGrey;
 
 	@media (min-width: @breakpoint__sm) {
-		font-size: 90%;
-	}
-
-	@media (min-width: @breakpoint__md) {
-		font-size: 100%;
+		font-size: 87.5%;
 	}
 }
 
 body {
 	margin: 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
-	font-weight: 300;
-	color: @color__blue;
+	font-weight: normal;
+	color: @color__black;
 	background: @color__white;
+	position: relative;
 }
 
 a {
@@ -54,47 +47,63 @@ h2,
 h3,
 h4 {
 	line-height: 1.2;
+	font-family: 'Dosis', sans-serif;
 }
 
 h1 {
-	font-size: 2rem;
-	font-weight: 100;
-	margin-bottom: 0.8em;
+	font-size: 2.4rem;
+	font-weight: 300;
+	margin-bottom: 0.6em;
+	color: @color__purple;
+	text-align: center;
 
-	@media (min-width: @breakpoint__sm) {
-		font-size: 2.5rem;
+	&:before {
+		content: '\67';
+		.icon();
+		display: block;
+		font-size: 0.8em;
+		margin-bottom: 0.5em;
 	}
 
-	@media (min-width: @breakpoint__md) {
-		font-size: 3.8rem;
+	&:after {
+		content: '';
+		display: block;
+		height: 4px;
+		width: 50%;
+		max-width: 300px;
+		background: url("../images/ico-wave_purple.svg") repeat-x center;
+		background-size: 11.6px 4px;
+		margin: 0.5em auto 0;
+	}
+
+	@media (min-width: @breakpoint__sm) {
+		font-size: 4.3rem;
 	}
 }
 
 h2 {
-	font-size: 1.8rem;
+	font-size: 2rem;
 	font-weight: 300;
 	margin-bottom: 0.8em;
+	color: @color__black;
 
 	@media (min-width: @breakpoint__sm) {
-		font-size: 2rem;
-	}
-
-	@media (min-width: @breakpoint__md) {
-		font-size: 2.5rem;
+		font-size: 2.9rem;
 	}
 }
 
 h3 {
 	font-size: 1.4rem;
-	font-weight: 500;
+	font-weight: bold;
 	margin-bottom: 0.8em;
+	color: @color__purple;
 
 	@media (min-width: @breakpoint__sm) {
 		font-size: 1.6rem;
 	}
 
 	@media (min-width: @breakpoint__md) {
-		font-size: 1.8rem;
+		font-size: 1.9rem;
 	}
 }
 
@@ -113,18 +122,21 @@ h6 {
 }
 
 hr {
-	margin: 1rem 0;
 	border: 0;
-	border-bottom: 1px solid fade(@color__blue, 20%);
-	width: 45%;
+	height: 4px;
+	width: 50%;
+	max-width: 300px;
+	background: url("../images/ico-wave_purple.svg") repeat-x center;
+	background-size: 11.6px 4px;
+	margin: 0.5em auto 0;
 }
 
 .wrapper {
 	max-width: @content__width;
 	margin: 0 auto;
 
-	&--smaller {
-		max-width: @content__width--smaller;
+	&--small {
+		max-width: @content__width--small;
 		margin: 0 auto;
 	}
 }
@@ -142,10 +154,6 @@ hr {
 	&__color {
 		&--white {
 			color: @color__white;
-		}
-
-		&--lightBlue {
-			color: @color__lightBlue;
 		}
 	}
 
@@ -178,23 +186,21 @@ hr {
 
 /* background */
 .bg {
-	&--yellow {
-		background-color: @color__yellow;
+	&--solomon {
+		background-color: @color__solomon;
 	}
 	&--green {
 		background-color: @color__green;
 	}
-	&--pink {
-		background-color: @color__pink;
+	&--veryLightGrey {
+		background-color: @color__veryLightGrey;
 	}
-	&--blue {
-		background-color: @color__lighterBlue;
-	}
-	&--aqua {
-		background-color: @color__aqua;
-	}
-	&--red {
-		background-color: @color__lighterRed;
+	&--purpleGradient {
+		background: #a233f4;
+		background: -moz-linear-gradient(left, #a233f4 0%, #671fd2 100%);
+		background: -webkit-linear-gradient(left, #a233f4 0%,#671fd2 100%);
+		background: linear-gradient(to right, #a233f4 0%,#671fd2 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a233f4', endColorstr='#671fd2',GradientType=1 );
 	}
 }
 
